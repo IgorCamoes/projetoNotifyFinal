@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+    display: grid;
+    /*grid-template-rows: 521px 285px 365px 400px 100px;*/
+    grid-template-rows: 82vh 45.1vh 57.3vh 62.7vh 20vh;
+    grid-template-columns: 1366px;
+    grid-template-areas: 'header' 'section' 'article' 'aside' 'footer';
+    font-family: 'Hind', sans-serif;
+
+}
+
+
+
+header{
+    grid-template-columns: 54% 46%;
+    grid-template-rows: 100%;
+    border-top: 9px solid #37cc70;
+    grid-area: header;
+    display: grid;
+    background-image: url("img/banner.png");
+    background-size: cover;
+}
+
+header div:first-child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Pacifico', cursive;
+}
+
+header div:first-child h1{
+    font-size: 36pt;
+    font-weight: 400;
+    color: #e3e3e3;
+
+}
+
+header div:first-child h1 span:first-child{
+    font-style: bold;
+}
+
+header div:last-child{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    
+}
+
+header div:last-child img{
+    height: 84%;
+    width: 59%;
+    padding-left: 5%;
+}
+
+section{ 
+
+}
+
+article{
+    grid-area: article;
+    display: flex;
+    justify-content: center;
+    background-color: #e3e3e3;
+
+}
+
+aside{
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+}
+
+aside div:first-child div{
+    padding-top: 30px;
+    width: 750px;
+    height: 50px;
+    font-size: 12pt;
+    font-style: italic;
+    line-height: 25px;
+    text-indent: 15px;
+    color: #929292;
+}
+
+aside div:nth-child(2) img{
+    width: 45px;
+}
+
+aside div:nth-child(4){
+    background-color: aqua;
+}
+
+aside div:last-child img{
+    width: 24px;
+}
+
+
+
+footer{
+    grid-area: footer;
+    display: flex;
+    background-color: #e4e4e4;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 24px;
+}
+
+footer div{
+    display: flex;
+    justify-content: space-between; 
+    width: 463px;
+    height: 10px;
+}
+
+footer div a{
+    text-decoration: none;
+    font-size: 10pt;
+    color: #8a8a8a;
+}
