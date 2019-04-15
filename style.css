@@ -175,6 +175,7 @@ article{
     color: #8a8a8a;
 }
 
+
 .divBotao #botao{
     border: 0px none #37cc70;
     background-color: #37cc70;
@@ -191,6 +192,11 @@ article{
 
 .divBotao #botao value{
     color: #ffffff;
+}
+
+.divBotao #email:focus, .divBotao #botao:focus{
+    outline: none;
+    
 }
 
 .divVideo{
