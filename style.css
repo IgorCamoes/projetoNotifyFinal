@@ -1,7 +1,6 @@
 body {
     margin: 0;
     display: grid;
-    /*grid-template-rows: 521px 285px 365px 400px 100px;*/
     grid-template-rows: 82vh 45.1vh 57.3vh 62.7vh 20vh;
     grid-template-columns: 1366px;
     grid-template-areas: 'header' 'section' 'article' 'aside' 'footer';
@@ -12,57 +11,193 @@ body {
 
 
 header{
+    grid-area: header;
+    display: grid;
     grid-template-columns: 54% 46%;
     grid-template-rows: 100%;
     border-top: 9px solid #37cc70;
-    grid-area: header;
-    display: grid;
     background-image: url("img/banner.png");
     background-size: cover;
 }
 
-header div:first-child{
+.divLogo{
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
-    font-family: 'Pacifico', cursive;
 }
 
-header div:first-child h1{
-    font-size: 36pt;
-    font-weight: 400;
-    color: #e3e3e3;
-
-}
-
-header div:first-child h1 span:first-child{
-    font-style: bold;
-}
-
-header div:last-child{
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
-    
-}
-
-header div:last-child img{
+.divMao img{
     height: 84%;
     width: 59%;
     padding-left: 5%;
 }
 
+header div div:first-child{
+    display: grid;
+    grid-template-rows: 34% 32% 33%;
+    grid-template-columns: 100%;
+    width: 55%;
+    height: 50%;
+    margin: 0px 55px;
+}
+
+header div div h1{
+    font-family: 'Pacifico', cursive;
+    margin: 0;
+    font-size: 36pt;
+    padding-bottom: 4px;
+    color: #ffffff;
+    font-weight: 300;
+    word-spacing: 10px;
+}
+
+header div div h1 span{
+    margin-left: 10px;
+    color: #37cc70;
+}
+
+header div div p{
+    margin: 22px 0px 0px 1px;
+    font-size: 16pt;
+    line-height: 32px;
+    word-spacing: 1.5px;
+    color: #ffffff;
+}
+
+.divIcones{
+    height: 108%;
+    width: 42%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.divIcones a img{
+    opacity: 0.6;
+    height: 24px;
+    background-color: black;
+    border-radius: 100%;
+    padding: 13px;
+}
+
+.divIcones a:hover img{
+    opacity: 1;
+    background-color: #37cc70;
+}
+
+.divMao{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+
+
 section{ 
+    display: flex;
+    justify-content: center;
+    padding: 0px 140px;
+}
+
+section div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0px;
 
 }
 
+section div:nth-child(2){
+    margin-left: 10px;
+}
+
+section div:nth-child(3){
+    margin-left: 10px;
+}
+
+section div img{
+    width: 40px;
+    padding: 21px;
+    border-radius: 100%;
+    background-color: #37cc70;
+    margin: 32px 12px 0px 0px;
+}
+
+section div h3{
+    margin: 0px;
+    padding: 21px 8px 0px 0px;
+    font-weight: 400;
+    letter-spacing: 1.2px;
+}
+
+section div p{
+    font-size: 11pt;
+    color: #8a8a8a;
+    text-align: center;
+    margin: 0;
+    padding: 11px 14px 0px 0px;
+}
 article{
     grid-area: article;
-    display: flex;
+    grid-template-columns: 50% 50%;
+    display: grid;
     justify-content: center;
     background-color: #e3e3e3;
 
 }
+
+.divBotao{
+    padding: 25px 0px 0px 182px;
+}
+
+.divBotao h3{
+    margin-bottom: 10px;
+    word-spacing: 1px;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+}
+
+.divBotao p{
+    font-size: 11pt;
+    margin: 0px 25px 0px 0px;
+    color: #8a8a8a;
+    line-height: 23px;
+}
+
+.divBotao #email{
+    border: 1px solid #8a8a8a;
+    height: 42px;
+    margin-top: 18px;
+    width: 49%;
+    border-radius: 10px 0px 0px 10px;
+    padding-left: 16px;
+    color: #8a8a8a;
+}
+
+.divBotao #botao{
+    border: 0px none #37cc70;
+    background-color: #37cc70;
+    height: 46px;
+    width: 23%;
+    border-radius: 0px 11px 13px 0px;
+    margin: 0px 0px 0px -6px;
+    padding: 2px 0px 4px 0px;
+    font-family: 'Hind', sans-serif;
+    font-size: 14pt;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.divBotao #botao value{
+    color: #ffffff;
+}
+
+.divVideo{
+    padding: 7% 26% 7% 11%;
+    border-radius: 30%;
+}
+
 
 aside{
     grid-area: aside;
@@ -71,6 +206,10 @@ aside{
     align-items: center;
     text-align: center;
     
+}
+
+aside div:first-child{
+    height: 37%;
 }
 
 aside div:first-child div{
@@ -84,19 +223,65 @@ aside div:first-child div{
     color: #929292;
 }
 
-aside div:nth-child(2) img{
+aside div:first-child h4{
+    font-style: normal;
+    font-weight: bold;
+    color: black;
+    margin: -3px 28px 0px 0px;
+    word-spacing: 3px;
+}
+
+.pessoas{
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+}
+
+.pessoas img{
     width: 45px;
 }
 
-aside div:nth-child(4){
-    background-color: aqua;
-}
-
-aside div:last-child img{
-    width: 24px;
+.pessoas a:hover img{
+    opacity: 0.7;
 }
 
 
+aside div:nth-child(3){
+    height: 19%;
+}
+
+aside div:nth-child(3) h2{
+    word-spacing: -2.5px;
+    letter-spacing: 0px;
+    font-size: 18pt;
+    margin: 0px 0px -13px 0px;
+    padding: 32px 0px 0px 0px;
+
+}
+
+aside div:nth-child(3) p{
+    color: #8a8a8a;
+    font-size: 11pt;
+    margin-top: 4.6%;
+}
+
+.socialMedia{
+    display: flex;
+    justify-content: space-around;
+    width: 17%;
+    margin: 40px 0px 0px 0px;
+}
+
+.socialMedia a img{
+    width: 18px;
+    padding: 7px;
+    border-radius: 60%;
+    background-color: #E3E3E3;
+}
+
+.socialMedia a:hover img{
+    background-color: #37cc70;
+}
 
 footer{
     grid-area: footer;
